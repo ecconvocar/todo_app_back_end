@@ -1,4 +1,8 @@
 class TodoController < ApplicationController
+  def index
+    @todo_all = Todo.all
+  end
+  
   def show
     @todo = Todo.find_by_id(params["id"])
   end

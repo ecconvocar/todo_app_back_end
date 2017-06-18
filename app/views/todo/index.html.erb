@@ -1,51 +1,5 @@
-    <h1 class="home"> Home Page </h1> 
-        <ol> 
-            <li> Title: Good Morning/Afternoon/Evening (Name)</li> 
-            <li> Multiple Tabs: Tasks, Calendar, Shop, Summary, Community, Account, Settings
-            <br> <img src="https://i.ytimg.com/vi/LiqY0F4gV2E/maxresdefault.jpg" width="400" alt="Momentum"> </ol>
-
-    <h1> <a href="show/1">My Tasks</a></a></h1>  
-        <ol> 
-            <li> Write down Todos </li> 
-                <input type="text" placeholder="Write what you need to do!"> 
-                <input type="button" value="Create"> <br>
-            <input name="first_name" id="First_Name" type="checkbox"/> 
-            <input name="last_name" id="Last_Name" type="text" placeholder="Task complete? Check box">             
-            <li> User rates difficulties and time it will take to complete each task </li>
-                <input type="number" placeholder="Rate difficulty!">
-                <input type="button" value="Create"
-            <li> App calculates points you will receive from each task </li> </ol>
-
-    <h1> <a href="show/2">Calendar </h1>
-        <ol> 
-            <li> Regular calendar format you are able to write on </li>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJHWox7V2ryrMPHb5c5Id-DjnSU3pMAepKDboy55pzNUv0YM41">
-            <li> Pushes notifications </li> </ol>
-
-    <h1> <a href="show/3">Community </h1>
-        <ol> 
-            <li> Uses forums system </li>
-            <li> Easy access for whole school to use </li>
-            <li> Specific subjects to choose from </li>
-            <li> Post the HW you need help on </li> 
-            <li> Chat system to solve HW (Discussion or Private) </li> 
-            <li> Option to resolve post or keep it in the system if multiple have the same problem </li> </ol>
-
-    <h1> <a href="show/4">Shop </h1>
-        <ol> 
-            <li> Options </li> 
-        <ul> 
-            <li> Page Customizations </li> 
-            <li> Avatars </li> 
-        </ul>
-            <li> Tracks Points </li>
-        </ol>
-
-    <h1> <a href="show/5">Account </h1>
-    <ol> 
-        <li> Choose Avator </li>
-        <li> Personal </li> </ol>
-        
-<h1>Example HTML Document with Ruby</h1>
-<p>Let's do some math</p>
-4 + 3 = <% 4+3 %>
+    <h1 class="home"> Home Page </h1> <br>
+   <% @todo_all.each do  |todo|%>
+    <a href = "/todo/show/<%= todo.id %>"> <span><strong><%= todo.id%></Strong>: <%= todo.description %></span> </a><br>
+   <% end %>
+<a href="/todo/new">New</a>
