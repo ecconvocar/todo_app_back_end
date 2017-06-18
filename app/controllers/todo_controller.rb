@@ -25,4 +25,10 @@ class TodoController < ApplicationController
     t.save
     redirect_to "/todo/show/#{t.id}"
   end
+  
+  def destroy
+    @todo = Todo.find_by_id(params[:id])
+    @todo.destroy!
+    redirect_to "/todo/index"
+  end
 end
