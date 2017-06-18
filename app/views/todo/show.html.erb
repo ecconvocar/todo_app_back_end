@@ -1,10 +1,10 @@
 <center><h1> My Tasks List </h1> <br> </center>
                  <a href="/todo/index">Home</a> <br>
-  <h2><%= @todo_description %></h2>
-    <span class="pomodoro-estimate large-pomodoro-estimate"><%= @todo_pomodoro_estimate %> Pomodoros</span> <br>
+  <h2><%= @todo.description %></h2>
+    <span class="pomodoro-estimate large-pomodoro-estimate"><%= @todo.pomodoro_estimate %> Pomodoros</span> <br>
   <a href="#" class="button" id="edit-todo-button">Edit</a> <br>
-  <a href="#" class="button" id="delete-todo-button">Delete</a> 
-    <span class="pomodoro-difficulty large-pomodoro-difficulty"><%= @todo_pomodoro_difficulty %> Difficulty Level</span> <br>
-    <a href="#" class="button" id="edit-todo-button">Edit</a> <br>
+  <a href="#" class="button" id="delete-todo-button">Delete</a> <br> <br>
+    <span class="pomodoro-difficulty large-pomodoro-difficulty"><%= @todo %> Difficulty Level</span> <br>
+  <a href="#" class="button" id="edit-todo-button">Edit</a> <br>
 </div>
-<h3>Todo #<%= params[:id] %></h3>
+<h3>Todo #<%= @todo.id %></h3>
