@@ -2,9 +2,9 @@
                  <a href="/todo/index">Home</a> <br>
   <h2><%= @todo.description %></h2>
     <span class="pomodoro-estimate large-pomodoro-estimate"><%= @todo.pomodoro_estimate %> Pomodoros</span> <br>
-  <a href="#" class="button" id="edit-todo-button">Edit</a> <br>
+  <a href="/todo/edit/<%= @todo.id %>" class="button edit-todo-button">Edit</a>
   <a href="#" class="button" id="delete-todo-button">Delete</a> <br> <br>
     <span class="pomodoro-difficulty large-pomodoro-difficulty"><%= @todo %> Difficulty Level</span> <br>
-  <a href="#" class="button" id="edit-todo-button">Edit</a> <br>
+  <a href="/todo/edit/<%= @todo.id %>" class="button edit-todo-button">Edit</a>
 </div>
 <h3>Todo #<%= @todo.id %></h3>
